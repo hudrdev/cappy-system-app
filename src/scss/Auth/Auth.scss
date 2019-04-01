@@ -1,0 +1,36 @@
+.Auth {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: [start] minmax(2rem, 1fr) [content-start] minmax(20rem, 30rem) [content-end] minmax(2rem, 1fr) [end];
+    grid-template-rows: 1fr;
+    grid-template-areas: 'left content right';
+    justify-items: center;
+    align-items: center;
+
+    form {
+        grid-area: content;
+        width: 100%;
+
+        .Auth__input {
+            position: relative;
+            font-size: 1.8rem;
+            line-height: 1.8rem;
+            font-weight: 300;
+
+            label {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                text-transform: uppercase;
+            }
+    
+            input {
+                width: 100%;
+                display: block;
+                height: 3.8rem;
+                overflow: hidden;
+                margin-top: 2rem;
+            }
+        }
+    }
+}

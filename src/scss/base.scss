@@ -1,7 +1,6 @@
 html {
     font-size: 62.5%;
     /* Now 10px = 1rem! */
-    background-color: black;
 }
 
 body {
@@ -11,4 +10,8 @@ body {
     /* default font-size for document */
     line-height: 1.5;
     /* a nice line-height */
+}
+
+* {
+    box-sizing: border-box;
 }
