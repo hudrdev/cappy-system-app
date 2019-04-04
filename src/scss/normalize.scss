@@ -176,6 +176,8 @@
   button,
   input { /* 1 */
     overflow: visible;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
   }
   
   /**

@@ -11,25 +11,86 @@
         grid-area: content;
         width: 100%;
 
-        .Auth__input {
+        div {
             position: relative;
             font-size: 1.8rem;
             line-height: 1.8rem;
-            font-weight: 300;
-
-            label {
-                position: absolute;
-                top: 1rem;
-                left: 1rem;
-                text-transform: uppercase;
-            }
-    
+            font-weight: 200;
+            
             input {
                 width: 100%;
                 display: block;
                 height: 3.8rem;
-                overflow: hidden;
+                outline: none;
                 margin-top: 2rem;
+                padding-left: 1rem;
+                border: none;
+                border-bottom: 1px solid $color-honeydew;
+                color: $color-honeydew;
+                background: transparent;
+                font-weight: 200;
+
+                &:focus ~ span::before,
+                &:focus ~ span::after {
+                    width: 50%;
+                }
+            }
+
+            label {
+                position: absolute;
+                top: 1.9rem;
+                transform: translateY(-50%);
+                left: 1rem;
+                text-transform: uppercase;
+                color: $color-honeydew;
+                font-weight: 200;
+                transition: all .3s ease-out;
+                user-select: none;
+                cursor: text;
+            }
+    
+            span {
+                &::before,
+                &::after {
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    height: 1px;
+                    width: 0%;
+                    background: $color-desire;
+                    transition: all .3s ease-out;
+                }
+
+                &::before {
+                    left: 0;
+                }
+
+                &::after {
+                    right: 0;
+                }
+            }
+        }
+
+        button {
+            position: relative;
+            display: block;
+            border: 1px solid $color-honeydew;
+            background: transparent;
+            color: $color-honeydew;
+            font-size: 1.8rem;
+            font-weight: 200;
+            text-transform: uppercase;
+            margin-top: 2rem;
+            width: 100%;
+            height: 3.8rem;
+            cursor: pointer;
+            user-select: none;
+            transition: all .3s ease-out;
+
+            &:hover {
+                background: $color-desire;
+                border-color: $color-desire;
             }
         }
     }
