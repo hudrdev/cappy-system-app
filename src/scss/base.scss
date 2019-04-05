@@ -2,6 +2,8 @@ html {
     font-size: 62.5%;
     /* Now 10px = 1rem! */
     background: $color-space-cadet;
+    background-image: linear-gradient(to right top, #1d3557, #244164, #2b4e71, #325b7f, #3a698c, #437797, #4e85a2, #5993ad, #6aa5b9, #7db7c4, #92c8d0, #a8dadc);
+    background-attachment: fixed;
     /* Background of entire App */
     font-family: 'Roboto', sans-serif;
 }
@@ -17,4 +19,8 @@ body {
 
 * {
     box-sizing: border-box;
+}
+
+input:required {
+    box-shadow: none;
 }

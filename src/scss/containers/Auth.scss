@@ -87,6 +87,7 @@
             cursor: pointer;
             user-select: none;
             transition: all .3s ease-out;
+            outline: none;
 
             &:hover {
                 background: $color-desire;

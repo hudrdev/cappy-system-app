@@ -2,5 +2,10 @@
 @import './variables.scss';
 @import './base.scss';
 
-@import './App/App.scss';
-@import './Auth/Auth.scss';
+// CONTAINERS
+@import './App.scss';
+@import './containers/Auth.scss';
+@import './containers/Admin.scss';
+
+// COMPONENTS
+@import './components/Header.scss';

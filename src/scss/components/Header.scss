@@ -1,0 +1,119 @@
+.Header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: relative;
+
+    &__name {
+        font-size: 2rem;
+        line-height: 2rem;
+        text-transform: uppercase;
+        font-weight: 200;
+        color: $color-honeydew;
+        user-select: none;
+        margin: 0;
+    }
+
+    &__burger-open {
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        transition: all .35s;
+        outline: none;
+        cursor: pointer;
+
+        div {
+            background: $color-honeydew;
+            height: 1px;
+            transition: all .35s;
+
+            &::before,
+            &::after {
+                display: block;
+                content: '';
+                position: absolute;
+                height: 1px;
+                width: 100%;
+                background: $color-honeydew;
+                transition: all .35s;
+            }
+
+            &::before {
+                top: .5rem;
+                transition: all .35s;
+            }
+
+            &::after {
+                bottom: .5rem;
+                transition: all .35s;
+            }
+        }
+    }
+
+    &__burger-close {
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        transition: all .35s;
+        outline: none;
+        cursor: pointer;
+
+        div {
+            &::before,
+            &::after {
+                display: block;
+                content: '';
+                position: absolute;
+                height: 1px;
+                width: 100%;
+                background: $color-honeydew;
+                transition: all .35s;
+            }
+
+            &::before {
+                transform: rotate(45deg);
+                transition: all .35s;
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+                transition: all .35s;
+            }
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 6rem);
+        top: 6rem;
+        left: 0;
+        background-image: linear-gradient(to right top, #1d3557, #244164, #2b4e71, #325b7f, #3a698c, #437797, #4e85a2, #5993ad, #6aa5b9, #7db7c4, #92c8d0, #a8dadc);
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-element {
+            font-size: 2rem;
+            line-height: 5rem;
+            font-weight: 200;
+            text-transform: uppercase;
+            color: $color-honeydew;
+            margin: 0;
+            user-select: none;
+            cursor: pointer;
+        }
+    }
+}
