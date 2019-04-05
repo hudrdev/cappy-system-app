@@ -1,6 +1,8 @@
 .Admin {
     display: grid;
     grid-template-columns: [full-start] 1fr [content-start] minmax(0, 75em) [content-end] 1fr [full-end];
-    grid-template-rows: [header-start] 6rem [header-end];
-    grid-template-areas: 'left header right';
+    grid-template-rows: [header-start] 6rem [header-end content-start] calc(100vh - 6rem) [content-end];
+    grid-template-areas: 
+        '. header .'
+        '. content .';
 }
