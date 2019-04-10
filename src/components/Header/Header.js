@@ -16,10 +16,7 @@ class Header extends Component {
             <div className="Header__menu">
                 <p className="Header__menu-element">hlavní stranka</p>
                 <p className="Header__menu-element">vytvořit uživatele</p>
-                <p className="Header__menu-element">menu element</p>
-                <p className="Header__menu-element">menu element</p>
-                <p className="Header__menu-element">menu element</p>
-                <p className="Header__menu-element">menu element</p>
+                <p className="Header__menu-element">seznam uživatelů</p>
             </div>
         )
 
