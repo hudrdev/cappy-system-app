@@ -37,7 +37,7 @@ class Auth extends Component {
                                 </Fragment> :
                                 <Fragment>
                                     <label
-                                        style={{top: '-.8rem', fontSize: '1.2rem'}}
+                                        style={{top: '-.5rem', fontSize: '1.2rem'}}
                                         htmlFor='email'>email</label>
                                 </Fragment>
                         }
