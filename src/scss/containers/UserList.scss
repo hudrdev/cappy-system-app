@@ -3,10 +3,10 @@
     padding: 0rem 2rem;
     display: grid;
     grid-template-rows: [title-start] 4rem [title-end users-start] 1fr [users-end];
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr minmax(30rem, 50rem) 1fr;
     grid-template-areas:
-        'title'
-        'users';
+        'title title title'
+        '. users .';
 
     h2 {
         grid-area: title;
