@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
     state = {
@@ -14,9 +15,24 @@ class Header extends Component {
     render() {
         const menu = (
             <div className="Header__menu">
-                <p className="Header__menu-element">hlavní stranka</p>
-                <p className="Header__menu-element">vytvořit uživatele</p>
-                <p className="Header__menu-element">seznam uživatelů</p>
+                <NavLink
+                    to='/admin'
+                    onClick={this.burgerHandler}
+                    style={{textDecoration: 'none'}}>
+                        <p className="Header__menu-element">hlavní stranka</p>
+                </NavLink>
+                <NavLink
+                    to='/admin/createuser'
+                    onClick={this.burgerHandler}
+                    style={{textDecoration: 'none'}}>
+                        <p className="Header__menu-element">vytvořit uživatele</p>
+                </NavLink>
+                <NavLink
+                    to='/admin/userlist'
+                    onClick={this.burgerHandler}
+                    style={{textDecoration: 'none'}}>
+                        <p className="Header__menu-element">seznam uživatelů</p>
+                </NavLink>
             </div>
         )
 
