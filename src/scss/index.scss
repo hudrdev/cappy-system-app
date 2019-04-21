@@ -1,6 +1,13 @@
 @import './normalize.scss';
 @import './variables.scss';
+@import './typography.scss';
 @import './base.scss';
+
+// COMPONENTS
+@import './components/Input.scss';
+@import './components/Header.scss';
+@import './components/Button.scss';
+@import './components/EditPositions.scss';
 
 // CONTAINERS
 @import './App.scss';
@@ -9,6 +16,3 @@
 @import './containers/CreateUser.scss';
 @import './containers/UserList.scss';
 @import './containers/UserEdit.scss';
-
-// COMPONENTS
-@import './components/Header.scss';

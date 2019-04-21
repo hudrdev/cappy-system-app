@@ -1,0 +1,15 @@
+.Button {
+    display: block;
+    height: 3.8rem;
+    background: transparent;
+    border: 1px solid $color-honeydew;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s ease-out;
+
+    &:hover {
+        border-color: $color-desire;
+        background: $color-desire;
+    }
+}

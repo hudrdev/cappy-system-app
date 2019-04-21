@@ -1,139 +1,30 @@
 .CreateUser {
     grid-area: content;
     display: grid;
-    grid-template-columns: minmax(2rem, 1fr) minmax(15rem, 45rem) minmax(2rem, 1fr);
-    grid-template-rows: 4rem 1fr;
+    grid-template-columns:
+        [left-padding-start] minmax(2rem, 1fr) [left-padding-end 
+        form-start] minmax(20rem, 50rem) [form-end 
+        right-padding-start] minmax(2rem, 1fr) [right-padding-end];
+    grid-template-rows:
+        [title-start] 4rem [title-end
+        form-start] 1fr [form-end];
     grid-template-areas: '. title .' '. form .';
-    justify-items: center;
 
     h2 {
         grid-area: title;
-        margin: 0;
-        font-size: 2rem;
-        font-weight: 200;
-        text-transform: uppercase;
-        color: $color-honeydew;
+        justify-self: center;
         align-self: center;
     }
 
     form {
         grid-area: form;
-        width: 100%;
-
-        .CreateUser__input-container {
-            position: relative;
-            font-size: 1.8rem;
-            line-height: 1.8rem;
-            font-weight: 200;
-
-            input {
-                width: 100%;
-                display: block;
-                height: 3.8rem;
-                outline: none;
-                margin-top: 2rem;
-                padding-left: 1rem;
-                border: none;
-                border-bottom: 1px solid $color-honeydew;
-                color: $color-honeydew;
-                background: transparent;
-                font-weight: 200;
-
-                &:focus~span::before,
-                &:focus~span::after {
-                    width: 50%;
-                }
-            }
-
-            label {
-                position: absolute;
-                top: 1.9rem;
-                transform: translateY(-50%);
-                left: 1rem;
-                text-transform: uppercase;
-                color: $color-honeydew;
-                font-weight: 200;
-                transition: all .3s ease-out;
-                user-select: none;
-                cursor: text;
-            }
-
-            span {
-
-                &::before,
-                &::after {
-                    display: block;
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    height: 1px;
-                    width: 0%;
-                    background: $color-desire;
-                    transition: all .3s ease-out;
-                }
-
-                &::before {
-                    left: 0;
-                }
-
-                &::after {
-                    right: 0;
-                }
-            }
-        }
+        display: grid;
+        grid-auto-rows: max-content;
+        grid-gap: 1rem;
+        padding-bottom: 1rem;
 
         button {
-            position: relative;
-            display: block;
-            border: 1px solid $color-honeydew;
-            background: transparent;
-            color: $color-honeydew;
-            font-size: 1.8rem;
-            font-weight: 200;
-            text-transform: uppercase;
-            margin: 2rem 0rem;
-            width: 100%;
-            height: 3.8rem;
-            cursor: pointer;
-            user-select: none;
-            transition: all .3s ease-out;
-            outline: none;
-
-            &:hover {
-                background: $color-desire;
-                border-color: $color-desire;
-            }
-        }
-
-        .CreateUser__position-container {
-            margin-top: 4rem;
-            display: grid;
-            grid-template-rows: 3.8rem;
-            grid-template-columns: repeat(3, 3fr);
-            grid-gap: 2rem;
-
-            div {
-                border: 1px solid $color-honeydew;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                opacity: .4;
-                cursor: pointer;
-                user-select: none;
-                transition: all .3s ease-out;
-                outline: none;
-
-                &:hover {
-                    opacity: 1;
-                }
-
-                p {
-                    font-size: 1.8rem;
-                    font-weight: 200;
-                    text-transform: uppercase;
-                    color: $color-honeydew;
-                }
-            }
+            margin-top: 1rem;
         }
     }
 }

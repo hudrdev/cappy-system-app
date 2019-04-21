@@ -1,0 +1,72 @@
+.Input {
+    position: relative;
+
+    input {
+        border: 0;
+        height: 3.8rem;
+        padding: 1rem;
+        margin-top: 1rem;
+        width: 100%;
+        background: transparent;
+        outline: none;
+
+        &:focus ~ span::before,
+        &:focus ~ span::after {
+            width: 50%;
+        }
+
+        &:placeholder-shown ~ label {
+            font-size: 1.8rem;
+            line-height: 1.8rem;
+            bottom: 1rem;
+        }
+
+        &:focus ~ label {
+            bottom: 3.3rem; 
+            font-size: 1.2rem;
+            line-height: 1.2rem;   
+        }
+
+    }
+
+    label {
+        position: absolute;
+        left: 1rem;
+        bottom: 3.3rem;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        text-transform: uppercase;
+        transition: all .3s ease-out;
+        user-select: none;
+        cursor: text;
+    }
+
+    span {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        height: 1px;
+        width: 100%;
+        background: $color-honeydew;
+
+        &::before,
+        &::after {
+            position: absolute;
+            display: block;
+            content: '';
+            bottom: 0;
+            height: 1px;
+            width: 0%;
+            background: $color-desire;
+            transition: all .3s ease-out;
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+        }
+    }
+}

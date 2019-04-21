@@ -1,65 +1,84 @@
 .UserList {
-    grid-area: content;
-    padding: 0rem 2rem;
-    display: grid;
-    grid-template-rows: [title-start] 4rem [title-end users-start] 1fr [users-end];
-    grid-template-columns: 1fr minmax(30rem, 50rem) 1fr;
-    grid-template-areas:
-        'title title title'
-        '. users .';
-
-    h2 {
-        grid-area: title;
-        margin: 0;
-        justify-self: center;
-        align-self: center;
-        font-size: 2rem;
-        font-weight: 200;
-        color: $color-honeydew;
-        text-transform: uppercase;
-    }
-
-    &__Users {
-        grid-area: users;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-auto-rows: 5rem;
-        grid-gap: 2rem;
-    }
-
+    
 }
 
-.User {
-    border: 1px solid rgba($color-honeydew, .5);
-    transition: all .3s ease-out;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 3fr 2fr;
-    align-items: center;
-    padding-left: .5rem;
 
-    &:hover {
-        border: 1px solid $color-honeydew;
-    }
 
-    &__name {
-        font-size: 1.8rem;
-        text-transform: uppercase;
-        font-weight: 200;
-        color: $color-honeydew;
-        margin: 0;
-    }
 
-    &__positions {
-        display: flex;
 
-        div {
-            font-size: 1rem;
-            font-weight: 200;
-            color: $color-honeydew;
-            text-transform: uppercase;
-            margin-right: 1rem;
-            opacity: 1;
-        }
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+// .UserList {
+//     grid-area: content;
+//     padding: 0rem 2rem;
+//     display: grid;
+//     grid-template-rows: [title-start] 4rem [title-end users-start] 1fr [users-end];
+//     grid-template-columns: 1fr minmax(30rem, 50rem) 1fr;
+//     grid-template-areas:
+//         'title title title'
+//         '. users .';
+
+//     h2 {
+//         grid-area: title;
+//         margin: 0;
+//         justify-self: center;
+//         align-self: center;
+//         font-size: 2rem;
+//         font-weight: 200;
+//         color: $color-honeydew;
+//         text-transform: uppercase;
+//     }
+
+//     &__Users {
+//         grid-area: users;
+//         display: grid;
+//         grid-template-columns: 1fr;
+//         grid-auto-rows: 5rem;
+//         grid-gap: 2rem;
+//     }
+
+// }
+
+// .User {
+//     border: 1px solid rgba($color-honeydew, .5);
+//     transition: all .3s ease-out;
+//     display: grid;
+//     grid-template-columns: 1fr;
+//     grid-template-rows: 3fr 2fr;
+//     align-items: center;
+//     padding-left: .5rem;
+
+//     &:hover {
+//         border: 1px solid $color-honeydew;
+//     }
+
+//     &__name {
+//         font-size: 1.8rem;
+//         text-transform: uppercase;
+//         font-weight: 200;
+//         color: $color-honeydew;
+//         margin: 0;
+//     }
+
+//     &__positions {
+//         display: flex;
+
+//         div {
+//             font-size: 1rem;
+//             font-weight: 200;
+//             color: $color-honeydew;
+//             text-transform: uppercase;
+//             margin-right: 1rem;
+//             opacity: 1;
+//         }
+//     }
+// }

@@ -1,0 +1,35 @@
+.EditPositions {
+    display: grid;
+    height: 3.8rem;
+    grid-template-rows: 3.8rem;
+    grid-template-columns:
+        [box-start] 1fr [box-end
+        cat-start] 1fr [cat-end
+        floor-start] 1fr [floor-end];
+    grid-template-areas: 'box cat floor';
+    grid-gap: 2rem;
+
+    div {
+        border: 1px solid $color-honeydew;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        outline: none;
+        opacity: .5;
+        transition: all .3s ease-out;
+
+        &:hover {
+            opacity: 1;
+        }
+        
+        p {
+            display: block;
+            text-transform: uppercase;
+        }
+    }
+
+    &__Box {
+        grid-area: box;
+    }
+}
