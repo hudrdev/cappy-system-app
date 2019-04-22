@@ -1,0 +1,38 @@
+.UserListItem {
+    height: 6rem;
+    width: 100%;
+    border: 1px solid rgba($color-honeydew, .5);
+    transition: all .3s ease-out;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 'name edit' 'positions edit';
+    padding: 0 .6rem;
+    cursor: pointer;
+    
+    &:hover {
+        border-color: rgba($color-honeydew, 1);
+    }
+
+    &__name {
+        grid-area: name;
+        align-self: center;
+    }
+
+    &__positions {
+        grid-area: positions;
+        width: max-content;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, max-content);
+        grid-gap: .5rem;
+        align-items: center;
+
+        p {
+            display: block;
+            font-size: 1rem;
+            text-transform: uppercase;
+            opacity: .3;
+        }
+    }
+}
