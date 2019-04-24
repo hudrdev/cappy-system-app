@@ -1,3 +1,30 @@
 .UserEdit {
     grid-area: content;
+    display: grid;
+    grid-template-columns:
+        [left-padding-start] minmax(2rem, 1fr) [left-padding-end 
+        form-start] minmax(20rem, 50rem) [form-end 
+        right-padding-start] minmax(2rem, 1fr) [right-padding-end];
+    grid-template-rows:
+        [title-start] 4rem [title-end
+        form-start] 1fr [form-end];
+    grid-template-areas: '. title .' '. form .';
+
+    h2 {
+        grid-area: title;
+        justify-self: center;
+        align-self: center;
+    }
+
+    form {
+        grid-area: form;
+        display: grid;
+        grid-auto-rows: max-content;
+        grid-gap: 1rem;
+        padding-bottom: 1rem;
+
+        button {
+            margin-top: 1rem;
+        }
+    }
 }

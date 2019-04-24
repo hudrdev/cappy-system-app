@@ -33,6 +33,12 @@ class Header extends Component {
                     style={{textDecoration: 'none'}}>
                         <p className="Header__menu-element">seznam uživatelů</p>
                 </NavLink>
+                <NavLink
+                    to='/admin/createshiftsrequests'
+                    onClick={this.burgerHandler}
+                    style={{textDecoration: 'none'}}>
+                        <p className="Header__menu-element">vytvořit požadavky</p>
+                </NavLink>
             </div>
         )
 

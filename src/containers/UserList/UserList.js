@@ -66,7 +66,8 @@ class UserList extends Component {
                         this.state.users.map(user => {
                             return (
                                 <UserListItem
-                                    user={user} />
+                                    user={user}
+                                    key={user.surname} />
                             )
                         })
                     }
