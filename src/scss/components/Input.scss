@@ -39,6 +39,7 @@
         transition: all .3s ease-out;
         user-select: none;
         cursor: text;
+        pointer-events: none;
     }
 
     span {
